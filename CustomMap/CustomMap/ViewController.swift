@@ -32,7 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // setando os delegates
+        // Definindo os delegates
         mapView.delegate = self
         locationManager.delegate = self
         
@@ -49,7 +49,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         for pin in pins {
             // criando o mkpintannotation
             let annotation = MKPointAnnotation()
-            // setando as coordenadas nele
+            // Definindo as coordenadas nele
             annotation.coordinate = pin
             // adicionando ele ao array de pontos
             annotations.append(annotation)
@@ -85,10 +85,10 @@ extension ViewController: MKMapViewDelegate {
         // Definindo a cor da borda da view
         imageViewForAnnotation.layer.borderColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
         
-        // setando o raio dos cantos da view para ficar arredondado.
+        // Definindo o raio dos cantos da view para ficar arredondado.
         imageViewForAnnotation.layer.cornerRadius = 20
         
-        // setando a imagem do objeto atual
+        // Definindo a imagem do objeto atual
         imageViewForAnnotation.image = #imageLiteral(resourceName: "perfil")
         
         // adicionando a imageview à view customizad
@@ -116,7 +116,7 @@ extension ViewController: MKMapViewDelegate {
         // adicionando a imagem de seta à MKAnnotationView
         annotationView?.image = #imageLiteral(resourceName: "sa")
         
-        // Setando o ajuste para a imagem se encaixar dentro da delimitação do tamanho da view.
+        // Definindo o ajuste para a imagem se encaixar dentro da delimitação do tamanho da view.
         annotationView?.contentMode = .scaleAspectFit
         
     
