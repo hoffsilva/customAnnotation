@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9F2-cZ-WQv">
+                                <rect key="frame" x="123" y="269" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.89930555560000003" blue="0.40306460859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5eM-wx-JB1"/>
+                                    <constraint firstAttribute="width" constant="128" id="myE-Wq-v68"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="64"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="pin" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iTa-5k-AXy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rFA-4l-2Sm"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iTa-5k-AXy" secondAttribute="bottom" id="4k4-6w-mEv"/>
+                            <constraint firstItem="iTa-5k-AXy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ahh-hA-qaS"/>
+                            <constraint firstItem="9F2-cZ-WQv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D2f-Wi-hYb"/>
+                            <constraint firstItem="9F2-cZ-WQv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIa-H9-OHv"/>
+                            <constraint firstItem="iTa-5k-AXy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i9y-hG-X82"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTa-5k-AXy" secondAttribute="trailing" id="tRk-uQ-O2U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customView" destination="9F2-cZ-WQv" id="HvJ-sv-lFn"/>
+                        <outlet property="mapView" destination="iTa-5k-AXy" id="iiJ-vn-bK4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
